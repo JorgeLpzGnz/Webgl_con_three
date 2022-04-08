@@ -1,10 +1,11 @@
 import * as THREE from './threejs/three.module.js' 
 import { STLLoader } from './threejs/STLLoader.js'
+import { ThreeMFLoader } from './threejs/3MFLoader.js';
 import { OrbitControls } from './threejs/OrbitControls.js'
 
 let scene, camera, renderer, object, controls, light;
 
-// escena
+// escena elementos
 function init() {
     scene = new THREE.Scene()
     scene.background = new THREE.Color(0x087b93)
@@ -23,6 +24,11 @@ function init() {
     // object = new THREE.Mesh( new THREE.BoxGeometry, material)
 
     scene.add(object)
+
+    // nuevo modelos 3MFLoader
+
+    let loader2 = new ThreeMFLoader()
+    loader2.load('')
 
     renderer.render(scene, camera)
 
