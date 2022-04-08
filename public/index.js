@@ -5,7 +5,7 @@ import { OrbitControls } from './threejs/OrbitControls.js'
 
 let scene, camera, renderer, object, controls, light;
 
-// escena elementos
+// escena 
 function init() {
     scene = new THREE.Scene()
     scene.background = new THREE.Color(0x087b93)
